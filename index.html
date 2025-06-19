@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Hanken+Grotesk">
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    main{
+      background-color: #ebf1ff;
+      font-family: 'Hanken Grotesk', serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center ;
+    }
+    .container-1{
+      height: 55vh;
+      background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+      width: 300px;
+      text-align: center;
+      border-radius: 30px;
+      color: hsl(241, 100%, 89%);
+    }
+    .total > p {
+      margin: 0;
+    }
+    .tScore{
+      font-size: 48px;
+      font-weight: 900;
+      padding: 0;
+      margin: 0;
+    }
+    .total{
+      margin: auto;
+      color: white;
+      background: linear-gradient( hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      align-content: center;
+    }
+    .great{
+      color: white;
+      font-size: 1.5rem;
+    }
+    .comment{
+      margin: auto;
+      width: 70%;
+    }
+    .container-2{
+      background-color: white;
+      height: 55vh;
+      width: 300px;
+      border-radius: 0 30px 30px 0;
+    }
+    .sum{
+      margin-left: 24px;
+    }
+    .bar{
+      width: 80%;
+      margin: auto;
+      border-radius: 10px;
+      align-content: center;
+
+    }
+    .ratings{
+      
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+    }
+    .ratings > p {
+      margin: 0;
+      padding: 0;
+    }
+    .reaction{
+      font-weight: bolder;
+      background-color: rgba(255, 87, 87, 10%);
+      color: rgb(255,87,87);
+      margin: 10px auto;
+      height: 48px;
+    }
+    .memory{
+      font-weight: bolder;
+      background-color: rgba(255, 176, 31, 10%);
+      color: rgb(255, 176, 31);
+      margin: 10px auto;
+      height: 48px;
+    }
+    .verbal{
+      font-weight: bolder;
+      background-color: rgba(0, 189, 145, 10%);
+      color: rgb(0,189,145);
+      margin: 10px auto;
+      height: 48px;
+    }
+    .visual{
+      font-weight: bolder;
+      background-color: rgba(17, 36, 212, 10%);
+      color: rgb(17,36,212);
+      margin: 10px auto;
+      height: 48px;
+    }
+    .numbers{
+      font-weight: lighter;
+      color: #303b5a;
+    }
+    span{
+      font-weight: bolder;
+    }
+   
+    button{
+      color: white;
+      margin-left: 30px;
+      margin-top: 16px;
+      padding: auto;
+      width: 80%;
+      height: 40px;
+      border-radius: 20px;
+      border: none;
+      background-color: #303b5a;
+    }
+
+    .attribution{
+      font-size: 11px; text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+
+
+    @media (max-width: 431px) {
+      main{
+        display: block;
+        margin-inline: auto;
+        height: 100vh;
+      }
+      .container-1{
+        width: 100%;
+        padding-top: 16px;
+        height: 330px;
+        margin-bottom: 0;
+        border-radius: 0 0 20px 20px;
+        position: relative;
+        z-index: 1;
+      }
+      .container-2{
+        width: 100%;
+        padding-top: 16px;
+        margin-top: -20px;
+        border-radius: 20px 20px 0 0;
+      }
+      .bar{
+        padding: 0 16px;
+        margin-top: 16px ;
+        margin-bottom: 16px;
+      }
+      .attribution{
+        margin-top: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <div class="container-1">
+
+      <p>Your Result</p>
+      <div class="total">
+        <p class="tScore">76</p>
+        <p>of 100</p>
+      </div>
+      <h2 class="great">Great</h2>
+      <p class="comment">You scored higher than 65% of people who have taken these tests.</p>
+
+
+    </div>
+
+    <div class="container-2">
+      <h2 class="sum">Summary</h2>
+
+      <div class="reaction bar">
+        <div class="ratings red">
+          <p><img src="./assets/images/icon-reaction.svg">Reaction</p>
+          <p class="numbers"><span>80</span> / 100</p>
+        </div>
+      </div>
+
+      <div class="memory bar">
+        <div class="ratings red">
+          <p><img src="./assets/images/icon-memory.svg">Memory</p>
+          <p class="numbers"><span>92</span> / 100</p>
+        </div>
+      </div>
+
+      <div class="verbal bar">
+        <div class="ratings red">
+          <p><img src="./assets/images/icon-verbal.svg">Verbal</p>
+          <p class="numbers"><span>61</span> / 100</p>
+        </div>
+      </div>
+<!--  -->
+      <div class="visual bar">
+        <div class="ratings red">
+          <p><img src="./assets/images/icon-visual.svg">Visual</p>
+          <p class="numbers"><span>72</span> / 100</p>
+        </div>
+      </div>
+      
+      <button>Continue</button>
+    </div>
+    
+  </main>
+
+  <!-- Your Result
+  76
+  of 100
+
+  Great
+  You scored higher than 65% of the people who have taken these tests.
+  
+  Summary
+
+  Reaction
+  80 / 100
+
+  Memory
+  92 / 100
+
+  Verbal
+  61 / 100
+
+  Visual
+  72 / 100
+
+  Continue -->
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Adeyimika James AJOSE</a>.
+    </div>
+  </footer>
+</body>
+</html>
